@@ -11,10 +11,15 @@ public class Main {
         int[][] matrix = new int[10][15];
         System.out.println("The 'matrix' values is");
         for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = random.nextInt(89) + 10;
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
             System.out.print("[ ");
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = random.nextInt(89);
-                System.out.print(matrix[i][j] + 10 + " , ");
+                System.out.print(matrix[i][j] + " , ");
             }
             System.out.print("]");
             System.out.println();
@@ -25,12 +30,11 @@ public class Main {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (rowNumber == matrix.length - 1 - i) {
-                    rowSum += matrix[rowNumber][j] + 10;
+                    rowSum += matrix[rowNumber][j];
                 }
             }
         }
         System.out.println("rowNumber = " + rowNumber);
         System.out.println("rowSum = " + rowSum);
-
     }
 }
