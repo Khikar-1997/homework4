@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         int[][] matrix = new int[10][15];
-        int[][] matrix270 = new int[15][10];
         System.out.println("The 'matrix' values is");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
